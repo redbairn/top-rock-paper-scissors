@@ -30,7 +30,7 @@ const totalRounds = 5;
 function playRound(humanChoice, computerChoice) {
 
     const content3 = document.createElement("p");
-    content3.textContent = `The human chose: ${["Rock", "Paper", "Scissors"][humanChoice]}`;
+    content3.textContent = `The human chose:    ${["Rock", "Paper", "Scissors"][humanChoice]}`;
     content1.appendChild(content3);
 
     const content4 = document.createElement("p");
@@ -58,8 +58,10 @@ function playRound(humanChoice, computerChoice) {
     }
 
     const content8 = document.createElement("p");
-    content8.textContent = `Current Score - Computer: ${computerScore}, Human: ${humanScore}`;
+    const content9 = document.createElement("hr");
+    content8.textContent = `[Current Score - Computer: ${computerScore}, Human: ${humanScore}]`;
     content8.setAttribute("style", "font-weight:bold;");
+    content8.appendChild(content9);
     content1.appendChild(content8);
 
     // Increment rounds
